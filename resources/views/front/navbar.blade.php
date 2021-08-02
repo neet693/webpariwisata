@@ -80,11 +80,11 @@
 
                                         {{-- </strong> --}}
                                 @else
-                                    <a href="{{ route('login') }}" class="button is-link">Masuk</a>
+                                    {{-- <a href="{{ route('login') }}" class="button is-link">Masuk</a> --}}
 
-                                    @if (Route::has('register'))
+                                    {{-- @if (Route::has('register'))
                                         <a href="{{ route('register') }}" class="button is-danger">Daftar</a>
-                                    @endif
+                                    @endif --}}
                                 @endauth
                             </div>
                         @endif

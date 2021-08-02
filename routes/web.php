@@ -45,11 +45,19 @@ Route::middleware(['auth', 'PageAccess:admin'])->group(function () {
 
 });
 
-Route::middleware(['auth'])->group(function () {
-    Route::resource('wisatas', WisataController::class);
-    Route::resource('kuliners', KulinerController::class);
-    Route::resource('penginapans', PenginapanController::class);
-    Route::resource('events', EventController::class);
+// Route::middleware(['auth'])->group(function () {
+
+
+// });
+
+Route::middleware(['auth', 'PageAccess:user'])->group(function () {
+
+});
+
+Route::resource('wisatas', WisataController::class);
+Route::resource('kuliners', KulinerController::class);
+Route::resource('penginapans', PenginapanController::class);
+Route::resource('events', EventController::class);
 
 // Wisata
 Route::get('/wisata', function () {
@@ -70,8 +78,3 @@ Route::get('/event', function () {
 Route::get('/penginapan', function () {
     return view('front.penginapan');
 })->name('penginapan');;
-});
-
-Route::middleware(['auth', 'PageAccess:user'])->group(function () {
-
-});
