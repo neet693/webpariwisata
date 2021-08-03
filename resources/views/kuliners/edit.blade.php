@@ -55,13 +55,23 @@
                                         </div>
                                     </div>
                                     <div class="col-span-3 sm:col-span-1">
-                                        <label for="link_semat" class="block text-sm font-medium text-gray-700">
-                                            Link Lokasi
+                                        <label for="latitude" class="block text-sm font-medium text-gray-700">
+                                           Latitude Tempat
                                         </label>
                                         <div class="mt-1">
-                                            <input type="text" name="link_semat" id="link_semat"
+                                            <input type="text" name="latitude" id="latitude"
                                                 class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
-                                                value="{{ $kuliner->link_semat }}">
+                                                value="{{ $kuliner->latitude }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-3 sm:col-span-1">
+                                        <label for="longitude" class="block text-sm font-medium text-gray-700">
+                                            Longitude Tempat
+                                        </label>
+                                        <div class="mt-1">
+                                            <input type="text" name="longitude" id="longitude"
+                                                class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
+                                                value="{{ $kuliner->longitude }}">
                                         </div>
                                     </div>
                                     <div class="col-span-3 sm:col-span-2">

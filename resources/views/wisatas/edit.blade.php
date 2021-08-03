@@ -39,7 +39,7 @@
                                                 value="{{ $wisata->link_lokasi }}">
                                         </div>
                                     </div>
-                                    <div class="col-span-3 sm:col-span-1">
+                                    <div class="col-span-3 sm:col-span-2">
                                         <label for="harga" class="block text-sm font-medium text-gray-700">
                                             Harga
                                         </label>
@@ -50,13 +50,23 @@
                                         </div>
                                     </div>
                                     <div class="col-span-3 sm:col-span-1">
-                                        <label for="link_semat" class="block text-sm font-medium text-gray-700">
-                                            Link Semat
+                                        <label for="latitude" class="block text-sm font-medium text-gray-700">
+                                            Latitude
                                         </label>
                                         <div class="mt-1">
-                                            <input type="text" name="link_semat" id="link_semat"
+                                            <input type="text" name="latitude" id="latitude"
                                                 class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
-                                                value="{{ $wisata->link_semat }}">
+                                                value="{{$wisata->latitude}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-3 sm:col-span-1">
+                                        <label for="longitude" class="block text-sm font-medium text-gray-700">
+                                            Longitude
+                                        </label>
+                                        <div class="mt-1">
+                                            <input type="text" name="longitude" id="longitude"
+                                                class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
+                                                value="{{$wisata->longitude}}">
                                         </div>
                                     </div>
                                     <div class="col-span-3 sm:col-span-2">

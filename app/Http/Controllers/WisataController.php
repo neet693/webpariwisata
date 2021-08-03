@@ -30,10 +30,12 @@ class WisataController extends Controller
             'nama' => 'required',
             'alamat' => 'required',
             'link_lokasi' => 'required',
-            'link_semat' => 'required',
+            //'link_semat' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required',
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
+            'latitude' => 'required',
+            'longitude' => 'required',
         ]);
         if (isset($request->gambar)) {
             $extention = $request->gambar->extension();
@@ -49,11 +51,13 @@ class WisataController extends Controller
             'nama' => request('nama'),
             'alamat' => request('alamat'),
             'link_lokasi' => request('link_lokasi'),
-            'link_semat' => request('link_semat'),
+            //'link_semat' => request('link_semat'),
             'harga' => request('harga'),
             'gambar' => $image_name,
             'slug' => Str::slug($request->nama, '-'),
             'deskripsi' => request('deskripsi'),
+            'latitude' => request('latitude'),
+            'longitude' => request('longitude'),
         ]);
         $request->session()->flash('flash.banner', 'Berhasil Menambahkan Tempat Wisata');
         $request->session()->flash('flash.bannerStyle', 'success');
@@ -85,6 +89,8 @@ class WisataController extends Controller
             'harga' => 'required',
             'deskripsi' => 'required',
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
+            'latitude' => request('latitude'),
+            'longitude' => request('longitude'),
         ]);
         if (isset($request->gambar)) {
             $extention = $request->gambar->extension();
@@ -104,6 +110,8 @@ class WisataController extends Controller
             'harga' => request('harga'),
             'gambar' => $image_name,
             'deskripsi' => request('deskripsi'),
+            'latitude' => request('latitude'),
+            'longitude' => request('longitude'),
         ]);
         $request->session()->flash('flash.banner', 'Berhasil Mengupdate Tempat Wisata!');
         $request->session()->flash('flash.bannerStyle', 'success');

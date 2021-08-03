@@ -24,6 +24,8 @@ class CreatePenginapansTable extends Migration
             $table->text('link_order')->nullable();
             $table->string('harga')->nullable();
             $table->text('deskripsi')->nullable();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

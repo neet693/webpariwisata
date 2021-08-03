@@ -7,8 +7,8 @@
             <section id="dispar-all-detail" class="my-6">
                 <div class="columns is-centered is-multiline">
                     <div class="column is-7">
-                        <iframe src="{{ $kuliner->link_semat }}" width="100%" height="300" style="border:0;"
-                            allowfullscreen="" loading="lazy"></iframe>
+                        <div id="map" style="width: 100%; height: 300px">
+                        </div>
                         <br>
                         <p class="is-size-3 has-text-weight-bold">{{ $kuliner->nama }}</p>
                         <p class="is-size-5">{{ $kuliner->alamat }}</p>
@@ -53,5 +53,49 @@
         </div>
     </div>
     @endsection
+    @push('kuliners-scripts')
+    <script type='text/javascript'
+    src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initialize"
+    {{-- src='https://maps.google.com/maps/api/js?language=en&key=AIzaSyB2C8vk7iaIGmDNt-TfJDQ_mdcyc7VbtTE&libraries=places&region=GB'> --}}
+    async defer>
+ </script>
+ <script defer>
+     function updateMarkerPosition(latLng) {
+     document.getElementById('latitude').value = [latLng.lat()];
+     document.getElementById('longitude').value = [latLng.lng()];
+   }
+     function initialize() {
+         var mapOptions = {
+             zoom: 13,
+             minZoom: 6,
+             maxZoom: 17,
+             zoomControl:true,
+             zoomControlOptions: {
+                   style:google.maps.ZoomControlStyle.DEFAULT
+             },
+             center: new google.maps.LatLng({{ $kuliner->latitude }}, {{ $kuliner->longitude }}),
+             mapTypeId: google.maps.MapTypeId.ROADMAP,
+             scrollwheel: true,
+             panControl:true,
+             mapTypeControl:true,
+             scaleControl:true,
+             overviewMapControl:true,
+             rotateControl:true
+             }
+         var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+         //Marker
+         var marker1 = new google.maps.Marker({
+             position : new google.maps.LatLng({{ $kuliner->latitude }}, {{ $kuliner->longitude }}),
+             map : map,
+             });
+         marker.setVisible(isEdit);
+     }
+     google.maps.event.addDomListener(window, 'load', initialize);
+     //updateMarkerPosition(latLng);
+     google.maps.event.addListener(marker1, function() {
+             updateMarkerPosition(marker1.getPosition());
+             });
+     </script>
+    @endpush
     {{-- @extends('front.footer') --}}
 {{-- </x-app-layout> --}}

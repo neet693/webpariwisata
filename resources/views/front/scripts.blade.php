@@ -1,4 +1,7 @@
 <script type="text/javascript" src="{{ asset('/js/jquery-3.5.1.min.js') }}"></script>
+@stack('wisata-scripts')
+@stack('kuliners-scripts')
+@stack('penginapan-scripts')
    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
    <script type="text/javascript">
        $(document).ready(function() {

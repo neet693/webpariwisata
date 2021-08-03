@@ -23,6 +23,8 @@ class CreateKulinersTable extends Migration
             $table->text('link_order')->nullable();
             $table->text('deskripsi')->nullable();
             $table->string('slug')->unique();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

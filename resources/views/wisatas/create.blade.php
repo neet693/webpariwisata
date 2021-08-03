@@ -56,6 +56,26 @@
                                         </div>
                                     </div>
                                     <div class="col-span-3 sm:col-span-1">
+                                        <label for="latitude" class="block text-sm font-medium text-gray-700">
+                                            Latitude Tempat
+                                        </label>
+                                        <div class="mt-1">
+                                            <input type="text" name="latitude" id="latitude"
+                                                class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
+                                                placeholder="Letakkan Latitude disini">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-3 sm:col-span-1">
+                                        <label for="longitude" class="block text-sm font-medium text-gray-700">
+                                            Longitude Tempat
+                                        </label>
+                                        <div class="mt-1">
+                                            <input type="text" name="longitude" id="longitude"
+                                                class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
+                                                placeholder="Letakkan Longitude disini">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-3 sm:col-span-2">
                                         <label for="harga" class="block text-sm font-medium text-gray-700">
                                             Harga
                                         </label>
@@ -63,16 +83,6 @@
                                             <input type="text" name="harga" id="harga"
                                                 class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
                                                 placeholder="Harga" required autofocus>
-                                        </div>
-                                    </div>
-                                    <div class="col-span-3 sm:col-span-1">
-                                        <label for="link_semat" class="block text-sm font-medium text-gray-700">
-                                            Link Semat
-                                        </label>
-                                        <div class="mt-1">
-                                            <input type="text" name="link_semat" id="link_semat"
-                                                class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
-                                                placeholder="Link Semat Web">
                                         </div>
                                     </div>
                                     <div class="col-span-3 sm:col-span-2">

@@ -23,6 +23,8 @@ class CreateWisatasTable extends Migration
             $table->string('harga')->nullable();
             $table->text('deskripsi')->nullable();
             $table->string('slug')->unique();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
