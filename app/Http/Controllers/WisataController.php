@@ -89,8 +89,8 @@ class WisataController extends Controller
             'harga' => 'required',
             'deskripsi' => 'required',
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
-            'latitude' => request('latitude'),
-            'longitude' => request('longitude'),
+            'latitude' => 'required',
+            'longitude' => 'required',
         ]);
         if (isset($request->gambar)) {
             $extention = $request->gambar->extension();
