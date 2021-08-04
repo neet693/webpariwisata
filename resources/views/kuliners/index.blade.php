@@ -84,6 +84,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        {{ $kuliners->links() }}
                     </div>
                 </div>
             </div>

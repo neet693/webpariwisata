@@ -84,6 +84,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        {{ $penginapans->links() }}
                     </div>
                 </div>
             </div>
