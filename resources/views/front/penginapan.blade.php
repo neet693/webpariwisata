@@ -20,50 +20,21 @@
     <div class="container container-event">
         <section id="dispar-penginapan" class="mb-6 mt-5">
             <form class="columns has-spaced-between mb-5" action="{{ url('cari') }}" method="GET">
-                <div class="column is-4">
-                    <div class="field-body">
-                        <div class="field">
-                            <!-- <label>Provinsi</label> -->
+                {{-- <form action="{{ url('cari') }}" method="GET"> --}}
+                    <div class="column is-3 has-text-right">
+                        <div class="field has-addons">
+                            <input class="input" name="pilihan" type="hidden" value="Penginapan">
                             <div class="control">
-                                <div class="select is-fullwidth">
-                                    <select>
-                                        <option selected>Terbaru</option>
-                                        <option>Terpopuler</option>
-                                        <option>Terjauh</option>
-                                        <option>Terdekat</option>
-                                    </select>
-                                </div>
+                                <input class="input" name="search" type="text" placeholder="Cari Penginapan">
                             </div>
-                        </div>
-                        <div class="field">
-                            <!-- <label>Kota</label> -->
                             <div class="control">
-                                <div class="select is-fullwidth">
-                                    <select>
-                                        <option selected>Kategori</option>
-                                        <option>Hotel</option>
-                                        <option>Apartment</option>
-                                    </select>
-                                </div>
+                                <input type="submit" class="button is-link" value="Cari">
+                                    {{-- Cari
+                                </a> --}}
                             </div>
                         </div>
                     </div>
-                </div>
-                            {{-- <form action="{{ url('cari') }}" method="GET"> --}}
-                                <div class="column is-3 has-text-right">
-                                    <div class="field has-addons">
-                                        <input class="input" name="pilihan" type="hidden" value="Penginapan">
-                                        <div class="control">
-                                            <input class="input" name="search" type="text" placeholder="Cari Penginapan">
-                                        </div>
-                                        <div class="control">
-                                            <input type="submit" class="button is-link" value="Cari">
-                                                {{-- Cari
-                                            </a> --}}
-                                        </div>
-                                    </div>
-                                </div>
-                            {{-- </form> --}}
+                {{-- </form> --}}
             </form>
             <div class="columns is-multiline">
                 @foreach ($penginapans as $penginapan)

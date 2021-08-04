@@ -20,24 +20,6 @@
 <div class="container container-event">
     <section id="dispar-event" class="mb-6 mt-5">
         <form class="columns has-spaced-between mb-5"  action=" {{ url('cari') }}" method="GET">
-            <div class="column is-2">
-                <div class="field-body">
-                    <div class="field">
-                        <!-- <label>Kota</label> -->
-                        <div class="control">
-                            <div class="select is-fullwidth">
-                                <select>
-                                    <option selected>Kategori</option>
-                                    <option>Kompetisi</option>
-                                    <option>Festival</option>
-                                    <option>Lainnya</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             {{-- <form action="{{ url('cari') }}" method="GET"> --}}
             <div class="column is-3 has-text-right">
                 <div class="field has-addons">
