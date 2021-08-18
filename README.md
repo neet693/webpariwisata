@@ -7,6 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Cara Pakai
+
+- Download / Clone Repository.
+- Buka GIT BASH di Folder Projek dan ketikan "composer install".
+- Copy file .env-example menjadi .env.
+- Di GIT BASH Ketikan "php artisan key:generate".
+- Import file .sql / Buat Database baru dan konfigurasikan file .env sesuai database baru.
+- Di GIT BASH Ketikan "php artisan migrate (Jika Databasenya Baru)".
+- Refresh Halaman.
+
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
